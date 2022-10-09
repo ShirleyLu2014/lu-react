@@ -1,0 +1,11 @@
+.lu-appear, .lu-enter {
+    opacity: 0;
+}
+.lu-appear-active, .lu-enter-active {
+    opacity: 1;
+    transition: opacity  2s ease;
+}
+.lu-exit-active {
+    opacity: 0;
+    transition: opacity  2s ease;
+}

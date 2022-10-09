@@ -1,0 +1,14 @@
+.content {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #f00;
+}
+.active {
+    color: #f00;
+    border-bottom: 2px solid #f00;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
