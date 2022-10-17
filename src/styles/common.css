@@ -1,0 +1,10 @@
+.flex-class {
+  display: flex;
+  text-align: center;
+  /* justify-content: space-around;
+  align-items: center; */
+}
+.flex-class > div {
+  border: 1px solid #f00;
+  flex: 1;
+}

@@ -1,39 +1,28 @@
-import { Component } from "react";
-// import TabControl from "./components/tabControl"
-// import Transitions from "./components/transitions"
-// import CssModule from "./components/cssModule"
-import CssInJs from "./components/cssInJs";
-import Redux from "./components/redux";
-import AppHtml from "./components/app";
-import Demo from "./components/demo";
-import About from "./components/about";
-import Banner from "./components/banner";
-import { connect } from "react-redux";
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      title: ["左边", "中间", "右边"],
-    };
-  }
+import React, { PureComponent } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+export class App extends PureComponent {
   render() {
-    const { name } = this.props;
     return (
       <div>
-        <Banner></Banner>
-        <Demo></Demo>
-        <h2>{name}</h2>
+        <div>header</div>
+        <Link to="/home">首页</Link>
+        <Link to="/about">关于</Link>
         <hr></hr>
-        <AppHtml />
-        <Redux></Redux>
-        <About></About>
+        <div>
+          {/* { */}
+          <Routes>
+            <Route path="/home" element={<Home />}></Route>
+            <Route path="/about" element={<About />}></Route>
+          </Routes>
+          {/* } */}
+        </div>
+        <hr></hr>
+        <div>footer</div>
       </div>
     );
   }
 }
-const mapStateToProps = (state) => {
-  return {
-    name: state.name,
-  };
-};
-export default connect(mapStateToProps)(App);
+
+export default App;
